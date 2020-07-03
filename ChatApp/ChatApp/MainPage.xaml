@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ChatApp.MainPage"
+             x:Name="content_page"
+             Title="Connecting to server......"
+             BackgroundColor="{StaticResource PageBackGroundColor}">
+    <StackLayout Margin="20,35,20,20">
+        <Label Text="Chat with your contacts" Font ="Bold,25" HorizontalOptions="Center" />
+        <Frame BorderColor="{StaticResource MyBorderColor}" Padding="15">
+            <ListView x:Name="friendListView" HasUnevenRows="True" SelectionMode="None">
+                <ListView.ItemTemplate >
+                    <DataTemplate>
+                        <ViewCell>
+                            <!--
+                            <StackLayout Orientation="Horizontal">
+                                <StackLayout Orientation="Vertical" Padding="5" HorizontalOptions="StartAndExpand">
+                                    <Label Text="{Binding FriendName}" Style="{DynamicResource TitleStyle}"/>
+                                    <Label Text="{Binding ID}" TextColor="CadetBlue"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Vertical">
+                                    <Label Text="New msg:"/>
+                                    <Label Text ="{Binding NewMsgCount}" Margin="0,7,0,7"/>
+                                </StackLayout>
+                                <Button Text="Chat" Margin="0,5,0,5" IsEnabled="{Binding CanChatWith}" Clicked="OnChatButtonClicked" VerticalOptions="Start"/>
+                            </StackLayout>
+                            -->
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="5*"/>
+                                    <ColumnDefinition Width="2*"/>
+                                    <ColumnDefinition Width="3*"/>
+                                </Grid.ColumnDefinitions>
+                                <StackLayout Grid.Column="0" Orientation="Vertical" Padding="5" HorizontalOptions="StartAndExpand">
+                                    <Label Text="{Binding FriendName}" Style="{DynamicResource TitleStyle}"/>
+                                    <Label Text="{Binding ID}" TextColor="CadetBlue"/>
+                                </StackLayout>
+                                <StackLayout Grid.Column="1" Orientation="Vertical">
+                                    <Label HorizontalOptions="Center" Text="New:" Margin="0,7,0,0"/>
+                                    <Label HorizontalOptions="Center" Text ="{Binding NewMsgCount}" Margin="0"/>
+                                </StackLayout>
+                                <Button Grid.Column="2" Text="Chat" Margin="0,5,0,5" IsEnabled="{Binding CanChatWith}" Clicked="OnChatButtonClicked" VerticalOptions="Start"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Frame>
+    </StackLayout>
+</ContentPage>

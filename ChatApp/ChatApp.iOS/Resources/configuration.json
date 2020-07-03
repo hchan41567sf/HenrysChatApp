@@ -1,0 +1,5 @@
+{
+    "LocalHost": "http://your-local-ip-address/chatHub",
+    "RemoteHost": "https://your-azure-url/chatHub",
+    "IsUsingLocalHost": true
+}

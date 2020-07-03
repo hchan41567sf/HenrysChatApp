@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ChatApp.ChatPage"
+             BackgroundColor="{StaticResource PageBackGroundColor}">
+    <!--
+    <ContentPage.Content>
+
+
+        <Grid BackgroundColor="AliceBlue">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1.1*" />
+                <RowDefinition Height="7.6*" />
+                <RowDefinition Height="1.3*" />
+            </Grid.RowDefinitions>
+
+            <Frame Grid.Row="0" HorizontalOptions="CenterAndExpand" Padding="10,5,10,5" Margin="10,10,10,5">
+                <Label x:Name="welcome_label" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" FontSize="20" />
+            </Frame>
+
+            <Frame Grid.Row="1" Margin="10,0,10,0">
+                <StackLayout x:Name="chat_messages_area" VerticalOptions="Start">
+
+                </StackLayout>
+            </Frame>
+
+            <Frame Grid.Row="2" Padding="10,5,10,5" Margin="10,5,10,10">
+                <Entry x:Name="chat_entry_box" Placeholder="Enter chat message" Completed="Chat_Entry_Completed"/>
+            </Frame>
+        </Grid>
+
+    </ContentPage.Content>
+    -->
+
+    <StackLayout>
+
+        <Frame HorizontalOptions="CenterAndExpand" Padding="10,5,10,5" Margin="10,10,10,5" BorderColor="{StaticResource MyBorderColor}">
+            <Label x:Name="welcome_label" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" FontSize="20" />
+        </Frame>
+
+        <Frame Margin="10,0,10,0" VerticalOptions="FillAndExpand" Padding="10" BorderColor="{StaticResource MyBorderColor}">
+            <ScrollView x:Name="scrollViewChatMsgArea">
+                <StackLayout x:Name="chat_messages_area">
+                    <!--
+                    <StackLayout Margin="0,0,0,15">
+                        <Frame BackgroundColor="#F0FFFF" CornerRadius="5" Margin="3,3,3,1" Padding="10">
+                            <Label Text="This is a label This is a label This is a label This is a label This is a label This is a label This is a label This is a label This is a label This is a label This is a label This is a label This is a label This is a label This is a label This is a label END"/>
+                        </Frame>
+                        <StackLayout Orientation="Horizontal">
+                            <Frame BackgroundColor="#F6F6F6" Padding="5" Margin="3,1,1,1" CornerRadius="3">
+                                <Label Text="Msg sent" FontSize="8"/>
+                            </Frame>
+                            <Frame BackgroundColor="#F6F6F6" Padding="5" Margin="1,1,1,1" CornerRadius="3">
+                                <Label Text="Msg seen" FontSize="8"/>
+                            </Frame>
+                        </StackLayout>
+                    </StackLayout>
+                    -->
+                    
+                </StackLayout>
+            </ScrollView>
+        </Frame>
+
+        <Frame Padding="10,5,10,5" Margin="10,5,10,15" VerticalOptions="End" BorderColor="{StaticResource MyBorderColor}">
+            <Entry x:Name="chat_entry_box" Placeholder="Enter chat message" Completed="Chat_Entry_Completed"/>
+        </Frame>
+    
+    </StackLayout>
+
+</ContentPage>
