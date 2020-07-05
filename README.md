@@ -2,7 +2,7 @@
 
 # Project Overview
 
-HenrysChatApp is a mobile chat client app that users can use to chat with each other in a chat room setting. 
+HenrysChatApp is a mobile chat client app that users can use to chat with each other in a chat room setting. Here is a video demo of the app: [demo](https://www.youtube.com/watch?v=VunSQjgmO6w).
 This app is similar to WhatsApp and Telegram. Users can chat with other users in their contact list. A few of the features include 
 being able to see if a message has been seen by the recepient, and seeing how many new messages have been left for you by each of your contacts.
 It is developed using Xamarin Forms and Visual Studio 2019. Technically, the app should work on both Android and iOS because Xamarin Forms is a 
